@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  cvebrowser:
+    container_name: cvebrowser-prod
+    image: cvebrowser-prod
+    build:
+      context: .
+      target: production

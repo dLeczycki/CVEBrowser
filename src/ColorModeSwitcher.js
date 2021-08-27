@@ -1,8 +1,11 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable import/prefer-default-export */
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { useColorMode, useColorModeValue, IconButton } from '@chakra-ui/react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
-export const ColorModeSwitcher = props => {
+export const ColorModeSwitcher = (props) => {
   const { toggleColorMode } = useColorMode();
   const text = useColorModeValue('dark', 'light');
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);

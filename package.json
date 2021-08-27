@@ -6,20 +6,29 @@
     "@chakra-ui/react": "^1.0.0",
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
-    "@testing-library/jest-dom": "^5.9.0",
-    "@testing-library/react": "^10.2.1",
-    "@testing-library/user-event": "^12.0.2",
+    "docx": "^6.0.3",
     "framer-motion": "^4.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^3.0.0",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^0.2.2"
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "yarn": "^1.22.11"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "docker-compose -f docker-compose.dev.yml up",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build-docker": "docker-compose -f docker-compose.prod.yml build",
+    "prod": "docker run -p 80:80 --name cve-browser cvebrowser-prod",
+    "start": "react-scripts start",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
