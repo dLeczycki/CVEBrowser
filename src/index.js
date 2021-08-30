@@ -1,8 +1,7 @@
-/* eslint-disable react/jsx-filename-extension */
 import { ColorModeScript } from '@chakra-ui/react';
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './layout/App/App';
 
 ReactDOM.render(
   <StrictMode>
