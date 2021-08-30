@@ -1,7 +1,7 @@
 import { ColorModeScript } from '@chakra-ui/react';
 import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import App from './layout/App/App';
+import App from './layout/App';
 
 ReactDOM.render(
   <StrictMode>

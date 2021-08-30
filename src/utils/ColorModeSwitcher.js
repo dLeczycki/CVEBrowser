@@ -1,6 +1,8 @@
 import React from 'react';
-import { useColorMode, useColorModeValue, IconButton } from '@chakra-ui/react';
+import { useColorMode, useColorModeValue } from '@chakra-ui/react';
 import { FaMoon, FaSun } from 'react-icons/fa';
+
+import NavButton from './NavButton';
 
 export const ColorModeSwitcher = (props) => {
   const { toggleColorMode } = useColorMode();
@@ -8,13 +10,11 @@ export const ColorModeSwitcher = (props) => {
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
   return (
-    <IconButton
-      size="md"
-      fontSize="lg"
+    <NavButton
+      marginTop="unset"
       aria-label={`Switch to ${text} mode`}
       variant="ghost"
       color="current"
-      marginLeft="2"
       onClick={toggleColorMode}
       icon={<SwitchIcon />}
       {...props}
