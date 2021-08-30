@@ -8,11 +8,13 @@
     "@emotion/styled": "^11.0.0",
     "docx": "^6.0.3",
     "framer-motion": "^4.0.0",
+    "i18next": "^20.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-i18next": "^11.11.4",
     "react-icons": "^3.0.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3"
+    "react-scripts": "^4.0.3"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -27,7 +29,7 @@
     "dev": "docker-compose -f docker-compose.dev.yml up",
     "build": "react-scripts build",
     "build-docker": "docker-compose -f docker-compose.prod.yml build",
-    "prod": "docker run -p 80:80 --name cve-browser cvebrowser-prod",
+    "prod-docker": "docker run -p 80:80 --name cve-browser cvebrowser-prod",
     "start": "react-scripts start",
     "eject": "react-scripts eject"
   },

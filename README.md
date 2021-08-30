@@ -17,8 +17,21 @@ To run application you need to have installed:
 For now installation of these is not covered. If you need to setup these please visit vendors sites to find out more about it.
 
 ## Running application in development
+Run in terminal:
 ```
 yarn run dev
+```
+
+Run in terminal in detached mode:
+```
+yarn run dev -d
+```
+
+You need to remember that application uses Docker. Some issues happen due to this technology. If you are not familiar with it you may encounter problems which may be solved when you get to know more about Docker.
+
+If you don't want to use it in development simply run below command to open application locally:
+```
+yarn run start
 ```
 
 ## Running application in production
@@ -29,5 +42,8 @@ yarn run build-docker
 
 And at last run it with
 ```
-yarn run prod
+yarn run prod-docker
 ```
+
+Above commands create Docker production container. If you want production build to run in a different way you need to configure application files on your own.
+
