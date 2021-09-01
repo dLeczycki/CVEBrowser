@@ -1,3 +1,15 @@
 {
-  "language": "Language"
+  "common":{
+    "language": "Language",
+    "theme": "Theme",
+    "settings": "Settings",
+    "cve-browser": "CVE Browser",
+    "cvss-calculator": "CVSS Calculator",
+    "bulletin": "Bulletin",
+    "bulletin-generator": "Bulletin Generator"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
+  }
 }

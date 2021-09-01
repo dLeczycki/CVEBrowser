@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { GridItem } from '@chakra-ui/react';
-import { ThemeContext } from '../../context/ThemeContext';
+import { SettingsContext } from '../../context/SettingsContext';
 
 const Footer = (layoutProps) => {
-  const { suplementaryColor, whiteOnly } = useContext(ThemeContext);
+  const { suplementaryColor, whiteOnlyColor } = useContext(SettingsContext);
 
   return (
     <GridItem
@@ -12,7 +12,7 @@ const Footer = (layoutProps) => {
       lineHeight="70px"
       textAlign="center"
       bgColor={suplementaryColor}
-      color={whiteOnly}
+      color={whiteOnlyColor}
     >
       &copy; Daniel Łęczycki 2021
 

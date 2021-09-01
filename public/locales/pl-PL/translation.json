@@ -1,3 +1,16 @@
 {
-  "language": "Język"
+  "common":{
+    "language": "Język",
+    "theme": "Motyw",
+    "settings": "Ustawienia",
+    "cve-browser": "Wyszukiwarka CVE",
+    "cvss-calculator": "Kalkulator CVSS",
+    "bulletin": "Biuletyn",
+    "bulletin-generator": "Generator Biuletynów"
+  },
+  "theme": {
+    "light": "Jasny",
+    "dark": "Ciemny"
+  }
+  
 }

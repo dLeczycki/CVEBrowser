@@ -1,11 +1,14 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button, useColorMode, useColorModeValue } from '@chakra-ui/react';
 import { LightModeIcon, DarkModeIcon } from '../../common/Icons';
 
 const ThemeModeSwitcher = (props) => {
+  const { t } = useTranslation();
+
   const { toggleColorMode } = useColorMode();
-  const text = useColorModeValue('Dark', 'Light');
   const SwitchIcon = useColorModeValue(DarkModeIcon, LightModeIcon);
+  const text = useColorModeValue(t('theme.dark'), t('theme.light'));
 
   return (
     <Button

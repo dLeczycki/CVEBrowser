@@ -6,7 +6,7 @@ import {
   Grid,
 } from '@chakra-ui/react';
 
-import ThemeProvider from './context/ThemeContext';
+import SettingsProvider from './context/SettingsContext';
 import NavBar from './layout/Navigation/NavBar/NavBar';
 import Page from './layout/Page/Page';
 import Footer from './layout/Footer/Footer';
@@ -14,7 +14,7 @@ import Footer from './layout/Footer/Footer';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <ThemeProvider>
+      <SettingsProvider>
         <Router>
           <Grid
             minH="100vh"
@@ -34,7 +34,7 @@ function App() {
             <Footer colStart={1} colEnd={3} rowStart={2} height="70px" />
           </Grid>
         </Router>
-      </ThemeProvider>
+      </SettingsProvider>
     </ChakraProvider>
   );
 }
