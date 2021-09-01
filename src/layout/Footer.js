@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { GridItem } from '@chakra-ui/react';
-import { SettingsContext } from '../../context/SettingsContext';
+import { SettingsContext } from '../context/SettingsContext';
 
 const Footer = (layoutProps) => {
   const { suplementaryColor, whiteOnlyColor } = useContext(SettingsContext);

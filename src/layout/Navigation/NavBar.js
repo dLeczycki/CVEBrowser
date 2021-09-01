@@ -1,10 +1,10 @@
 import React from 'react';
 import { GridItem, Flex, useColorModeValue } from '@chakra-ui/react';
 
-import CVEBrowserButton from '../NavButtons/CVEBrowserButton';
-import CVSSCalculatorButton from '../NavButtons/CVSSCalculatorButton';
-import BulletinButton from '../NavButtons/BulletinButton';
-import SettingsButton from '../NavButtons/SettingsButton';
+import CVEBrowserButton from './NavButtons/CVEBrowserButton';
+import CVSSCalculatorButton from './NavButtons/CVSSCalculatorButton';
+import BulletinButton from './NavButtons/BulletinButton';
+import SettingsButton from './NavButtons/SettingsButton';
 
 const NavBar = (layoutProps) => {
   const borderColor = useColorModeValue('blue.400', 'blue.700');

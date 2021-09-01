@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react';
 import { GridItem, Spinner, Flex } from '@chakra-ui/react';
 import { Switch, Route } from 'react-router-dom';
-import CVEBrowserPage from '../../pages/CVEBrowserPage';
-import BulletinGeneratorPage from '../../pages/BulletinGeneratorPage';
-import CVSSCalculatorPage from '../../pages/CVSSCalculatorPage';
-import SettingsPage from '../../pages/SettingsPage';
+import CVEBrowserPage from '../pages/CVEBrowserPage';
+import BulletinGeneratorPage from '../pages/BulletinGeneratorPage';
+import CVSSCalculatorPage from '../pages/CVSSCalculatorPage';
+import SettingsPage from '../pages/SettingsPage';
 
 const Page = (props) => {
   const spinner = (

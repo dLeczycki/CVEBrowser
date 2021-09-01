@@ -7,9 +7,9 @@ import {
 } from '@chakra-ui/react';
 
 import SettingsProvider from './context/SettingsContext';
-import NavBar from './layout/Navigation/NavBar/NavBar';
-import Page from './layout/Page/Page';
-import Footer from './layout/Footer/Footer';
+import NavBar from './layout/Navigation/NavBar';
+import Page from './layout/Page';
+import Footer from './layout/Footer';
 
 function App() {
   return (
