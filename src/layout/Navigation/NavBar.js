@@ -1,16 +1,25 @@
-import React from 'react';
-import { GridItem, Flex, useColorModeValue } from '@chakra-ui/react';
+import React, { useContext } from 'react';
+import { GridItem, Flex } from '@chakra-ui/react';
 
 import CVEBrowserButton from './NavButtons/CVEBrowserButton';
 import CVSSCalculatorButton from './NavButtons/CVSSCalculatorButton';
 import BulletinButton from './NavButtons/BulletinButton';
 import SettingsButton from './NavButtons/SettingsButton';
+import { SettingsContext } from '../../context/SettingsContext';
 
 const NavBar = (layoutProps) => {
-  const borderColor = useColorModeValue('blue.400', 'blue.700');
+  const { suplementaryColor, bgColor } = useContext(SettingsContext);
 
   return (
-    <GridItem as="nav" {...layoutProps} borderRight="2px" borderColor={borderColor}>
+    <GridItem
+      as="nav"
+      borderTop={['4px', '4px', '0']}
+      borderRight={['0', '0', '2px']}
+      borderColor={[suplementaryColor, suplementaryColor, suplementaryColor]}
+      backgroundColor={bgColor}
+      zIndex={2}
+      {...layoutProps}
+    >
       <Flex
         as="ul"
         flexDirection={['row', 'row', 'column']}
