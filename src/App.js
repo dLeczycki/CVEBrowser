@@ -10,6 +10,7 @@ import SettingsProvider from './context/SettingsContext';
 import NavBar from './layout/Navigation/NavBar';
 import Page from './layout/Page';
 import Footer from './layout/Footer';
+import ErrorBoundary from './common/ErrorBoundary';
 
 function App() {
   return (
@@ -30,7 +31,9 @@ function App() {
               width="100%"
               height={['70px', '70px', '100%']}
             />
-            <Page rowStart={1} />
+            <ErrorBoundary>
+              <Page rowStart={1} />
+            </ErrorBoundary>
             <Footer colStart={1} colEnd={3} rowStart={2} height="70px" />
           </Grid>
         </Router>
