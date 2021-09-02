@@ -11,10 +11,10 @@ import LanguageForm from '../components/settings/LanguageForm';
 
 const SettingsPage = () => {
   const { t } = useTranslation();
-  const title = t('common.settings');
+  const titleT = t('settings.title');
   return (
     <Box as="article">
-      <Header title={title} icon={<SettingsIcon />} />
+      <Header title={titleT} icon={<SettingsIcon />} />
       <Flex
         as="section"
         p={2}

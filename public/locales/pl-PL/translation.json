@@ -1,16 +1,28 @@
 {
-  "common":{
-    "language": "Język",
-    "theme": "Motyw",
-    "settings": "Ustawienia",
-    "cve-browser": "Wyszukiwarka CVE",
-    "cvss-calculator": "Kalkulator CVSS",
-    "bulletin": "Biuletyn",
-    "bulletin-generator": "Generator Biuletynów"
-  },
-  "theme": {
-    "light": "Jasny",
-    "dark": "Ciemny"
-  }
-  
+    
+    "settings": {
+      "title": "Ustawienia",
+      "language": "Język",
+      "theme": {
+        "title": "Motyw",
+        "light": "Jasny",
+        "dark": "Ciemny"
+      }
+    },
+    "cve-browser": {
+      "title":  "Wyszukiwarka CVE",
+      "search": "Szukaj",
+      "filters": "Filtry",
+      "publish-date-range": "Data Opublikowania Podatności",
+      "publish-start-date": "Opublikowana od",
+      "publish-end-date": "Opublikowana do",
+      "publish-date-explanation": "Te parametry określają kiedy podatność została dodana do bazy podatności.\n\n\nNie jest wymagane podanie dwóch dat jednocześnie ani żadnej z nich."
+    },
+    "cvss-calculator": {
+      "title":"Kalkulator CVSS"
+    },
+    "bulletin-generator":{
+      "title":  "Generator Biuletynów" ,
+      "bulletin": "Biuletyn"
+    }
 }

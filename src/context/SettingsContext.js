@@ -9,6 +9,7 @@ const SettingsProvider = ({ children }) => {
   const [language, setLanguage] = useState('');
   const suplementaryColor = useColorModeValue('blue.400', 'blue.700');
   const whiteOnlyColor = useColorModeValue('white', 'white');
+  const bgColor = useColorModeValue('white', 'gray.800');
 
   useEffect(() => {
     const languageInLocalStorage = getPLAINFromLocalStorage('i18nextLng');
@@ -20,6 +21,7 @@ const SettingsProvider = ({ children }) => {
     <SettingsContext.Provider value={{
       suplementaryColor,
       whiteOnlyColor,
+      bgColor,
       language,
       setLanguage,
     }}

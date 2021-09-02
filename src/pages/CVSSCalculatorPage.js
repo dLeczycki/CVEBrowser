@@ -8,10 +8,10 @@ import Header from '../common/Header';
 
 const CVSSCalculatorPage = () => {
   const { t } = useTranslation();
-  const title = t('common.cvss-calculator');
+  const titleT = t('cvss-calculator.title');
   return (
     <Box as="article">
-      <Header title={title} icon={<CVSSCalculatorIcon />} />
+      <Header title={titleT} icon={<CVSSCalculatorIcon />} />
     </Box>
   );
 };

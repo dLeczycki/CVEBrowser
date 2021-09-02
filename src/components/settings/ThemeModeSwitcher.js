@@ -8,7 +8,7 @@ const ThemeModeSwitcher = (props) => {
 
   const { toggleColorMode } = useColorMode();
   const SwitchIcon = useColorModeValue(DarkModeIcon, LightModeIcon);
-  const text = useColorModeValue(t('theme.dark'), t('theme.light'));
+  const text = useColorModeValue(t('settings.theme.dark'), t('settings.theme.light'));
 
   return (
     <Button

@@ -18,7 +18,7 @@ const LanguageForm = () => {
   return (
     <Flex justifyContent="center" alignItems="center" pt={3}>
       <FormLabel htmlFor="language" mb="0">
-        {`${t('common.language')}:`}
+        {`${t('settings.language')}:`}
       </FormLabel>
       <Select value={language} onChange={handleChange}>
         <option value="en-US">English</option>

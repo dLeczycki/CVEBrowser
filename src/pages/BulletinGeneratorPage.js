@@ -8,10 +8,10 @@ import { BulletinIcon } from '../common/Icons';
 
 const BulletinGenerator = () => {
   const { t } = useTranslation();
-  const title = t('common.bulletin-generator');
+  const titleT = t('bulletin-generator.title');
   return (
     <Box as="article">
-      <Header title={title} icon={<BulletinIcon />} />
+      <Header title={titleT} icon={<BulletinIcon />} />
     </Box>
   );
 };

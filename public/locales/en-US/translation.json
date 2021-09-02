@@ -1,15 +1,28 @@
 {
-  "common":{
+    
+  "settings": {
+    "title": "Settings",
     "language": "Language",
-    "theme": "Theme",
-    "settings": "Settings",
-    "cve-browser": "CVE Browser",
-    "cvss-calculator": "CVSS Calculator",
-    "bulletin": "Bulletin",
-    "bulletin-generator": "Bulletin Generator"
+    "theme": {
+      "title": "Theme",
+      "light": "Light",
+      "dark": "Dark"
+    }
   },
-  "theme": {
-    "light": "Light",
-    "dark": "Dark"
+  "cve-browser": {
+    "title":  "CVE Browser",
+    "search": "Search",
+    "filters": "Filters",
+    "publish-date-range": "Publish Date Range",
+    "publish-start-date": "Publish Start Date",
+    "publish-end-date": "Publish End Date",
+    "publish-date-explanation": "These parameters specify when vulnerabilities were added to vulnerability database during the period.\n\nIt is not necessary to provide both dates nor any of them."
+  },
+  "cvss-calculator": {
+    "title":"CVSS Calculator"
+  },
+  "bulletin-generator":{
+    "title":  "Bulletin Generator" ,
+    "bulletin": "Bulletin"
   }
 }
