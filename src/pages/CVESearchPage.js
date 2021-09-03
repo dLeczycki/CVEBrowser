@@ -5,19 +5,20 @@ import {
   Flex,
 } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
-import { CVEBrowserIcon } from '../common/Icons';
+
+import { CVESearchIcon } from '../common/Icons';
 import Header from '../common/Header';
 
-import SearchCVEButton from '../components/cve-browser/SearchCVEButton';
-import PublishedDateFilter from '../components/cve-browser/PublishedDateFilter';
-import ModifiedDateFilter from '../components/cve-browser/ModifiedDateFilter';
-import PageSizeFilter from '../components/cve-browser/PageSizeFilter';
-import KeywordsFilter from '../components/cve-browser/KeywordsFilter';
+import SearchCVEButton from '../components/cve-search/SearchCVEButton';
+import PublishedDateFilter from '../components/cve-search/PublishedDateFilter';
+import ModifiedDateFilter from '../components/cve-search/ModifiedDateFilter';
+import PageSizeFilter from '../components/cve-search/PageSizeFilter';
+import KeywordsFilter from '../components/cve-search/KeywordsFilter';
 
-const CVEBrowserPage = () => {
+const CVESearchPage = () => {
   const { t } = useTranslation();
-  const titleT = t('cve-browser.title');
-  const filtersT = t('cve-browser.filters');
+  const titleT = t('cve-search.title');
+  const filtersT = t('cve-search.filters');
 
   const [publishedDateRange, setPublishedDateRange] = useState({
     startDate: '',
@@ -32,7 +33,7 @@ const CVEBrowserPage = () => {
 
   return (
     <Box as="article">
-      <Header title={titleT} icon={<CVEBrowserIcon />} />
+      <Header title={titleT} icon={<CVESearchIcon />} />
       <SearchCVEButton
         searchParams={{
           publishedDateRange, modifiedDateRange, pageSize, keywords,
@@ -80,4 +81,4 @@ const CVEBrowserPage = () => {
   );
 };
 
-export default CVEBrowserPage;
+export default CVESearchPage;

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { GridItem, Flex } from '@chakra-ui/react';
 
-import CVEBrowserButton from './NavButtons/CVEBrowserButton';
+import CVESearchButton from './NavButtons/CVESearchButton';
 import CVSSCalculatorButton from './NavButtons/CVSSCalculatorButton';
 import BulletinButton from './NavButtons/BulletinButton';
 import SettingsButton from './NavButtons/SettingsButton';
@@ -29,7 +29,7 @@ const NavBar = (layoutProps) => {
         py={1}
         height="100%"
       >
-        <CVEBrowserButton />
+        <CVESearchButton />
         <CVSSCalculatorButton />
         <BulletinButton />
         <SettingsButton />

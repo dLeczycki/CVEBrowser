@@ -1,10 +1,10 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { CVEBrowserIcon } from '../../../common/Icons';
+import { CVESearchIcon } from '../../../common/Icons';
 
 import NavButton from './NavButton';
 
-const CVEBrowserButton = (props) => {
+const CVESearchButton = (props) => {
   const history = useHistory();
 
   const handleClick = () => {
@@ -14,11 +14,11 @@ const CVEBrowserButton = (props) => {
   return (
     <NavButton
       aria-label="Go to CVEBrowser Page"
-      icon={<CVEBrowserIcon />}
+      icon={<CVESearchIcon />}
       onClick={handleClick}
       {...props}
     />
   );
 };
 
-export default CVEBrowserButton;
+export default CVESearchButton;

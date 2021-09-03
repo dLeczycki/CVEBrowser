@@ -9,8 +9,8 @@
       "dark": "Dark"
     }
   },
-  "cve-browser": {
-    "title":  "CVE Browser",
+  "cve-search": {
+    "title":  "CVE Search",
     "search": "Search",
     "filters": "Filters",
     "published-date-range-title": "Publication Date Range",
@@ -33,5 +33,9 @@
   "bulletin-generator":{
     "title":  "Bulletin Generator" ,
     "bulletin": "Bulletin"
+  },
+  "not-found-page": {
+    "title": "Not found",
+    "explanation": "Page you are looking for could not be found."
   }
 }

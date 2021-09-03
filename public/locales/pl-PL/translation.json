@@ -9,7 +9,7 @@
         "dark": "Ciemny"
       }
     },
-    "cve-browser": {
+    "cve-search": {
       "title":  "Wyszukiwarka CVE",
       "search": "Szukaj",
       "filters": "Filtry",
@@ -34,5 +34,9 @@
     "bulletin-generator":{
       "title":  "Generator Biuletynów" ,
       "bulletin": "Biuletyn"
+    },
+    "not-found-page": {
+      "title": "Nie znaleziono",
+      "explanation": "Strona, której szukasz, nie została znaleziona."
     }
 }

@@ -1,10 +1,12 @@
 import React, { Suspense } from 'react';
 import { GridItem, Spinner, Flex } from '@chakra-ui/react';
 import { Switch, Route } from 'react-router-dom';
-import CVEBrowserPage from '../pages/CVEBrowserPage';
+import CVESearchPage from '../pages/CVESearchPage';
 import BulletinGeneratorPage from '../pages/BulletinGeneratorPage';
 import CVSSCalculatorPage from '../pages/CVSSCalculatorPage';
 import SettingsPage from '../pages/SettingsPage';
+import CVESearchResultsPage from '../pages/CVESearchResultsPage';
+import NotFoundPage from '../pages/NotFoundPage';
 
 const Page = (props) => {
   const spinner = (
@@ -22,11 +24,13 @@ const Page = (props) => {
     <GridItem as="main" {...props} p={2}>
       <Suspense fallback={spinner}>
         <Switch>
-          <Route component={CVEBrowserPage} path="/" exact />
-          <Route component={CVEBrowserPage} path="/cve-browser" />
+          <Route component={CVESearchPage} path="/" exact />
+          <Route component={CVESearchPage} path="/cve-search" exact />
+          <Route component={CVESearchResultsPage} path="/cve-search/results" />
           <Route component={BulletinGeneratorPage} path="/bulletin-generator" />
           <Route component={CVSSCalculatorPage} path="/cvss-calculator" />
           <Route component={SettingsPage} path="/settings" />
+          <Route component={NotFoundPage} />
         </Switch>
       </Suspense>
     </GridItem>
