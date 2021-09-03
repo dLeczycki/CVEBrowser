@@ -4,12 +4,15 @@ import { Button as ChakraButton } from '@chakra-ui/react';
 import { SettingsContext } from '../context/SettingsContext';
 
 const Button = (props) => {
-  const { suplementaryColor, whiteOnlyColor } = useContext(SettingsContext);
+  const { suplementaryColor, suplementaryColorHover, whiteOnlyColor } = useContext(SettingsContext);
   const { children } = props;
   return (
     <ChakraButton
       bgColor={suplementaryColor}
       color={whiteOnlyColor}
+      _hover={{
+        background: suplementaryColorHover,
+      }}
       {...props}
     >
       {children}
