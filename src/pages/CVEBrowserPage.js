@@ -33,35 +33,47 @@ const CVEBrowserPage = () => {
   return (
     <Box as="article">
       <Header title={titleT} icon={<CVEBrowserIcon />} />
-      <SearchCVEButton searchParams={{
-        publishedDateRange, modifiedDateRange, pageSize, keywords,
-      }}
+      <SearchCVEButton
+        searchParams={{
+          publishedDateRange, modifiedDateRange, pageSize, keywords,
+        }}
+        display="block"
+        mx="auto"
+        my={[10, 10, 4]}
+        p={4}
+        width={['80%', '80%', '500px']}
+        height="auto"
+        fontSize="2xl"
+        variant="solid"
       />
-      <Heading as="h2" my={4}>{filtersT}</Heading>
+      <Heading as="h2" mt={[12, 12, 6]} mb={[6, 6, 4]} pl={[0, 0, 2]} textAlign={['center', 'center', 'left']}>{filtersT}</Heading>
       <Flex as="section" flexWrap="wrap" justifyContent="space-around">
         <PublishedDateFilter
           publishedDateRange={publishedDateRange}
           setPublishedDateRange={setPublishedDateRange}
           flexBasis={['100%', '100%', '50%']}
-          mt={6}
+          p={1}
         />
         <ModifiedDateFilter
           modifiedDateRange={modifiedDateRange}
           setModifiedDateRange={setModifiedDateRange}
           flexBasis={['100%', '100%', '50%']}
-          mt={6}
+          mt={[6, 6, 0]}
+          p={1}
         />
         <PageSizeFilter
           pageSize={pageSize}
           setPageSize={setPageSize}
           flexBasis={['100%', '100%', '50%']}
-          mt={6}
+          mt={[6, 6, 20]}
+          p={2}
         />
         <KeywordsFilter
           keywords={keywords}
           setKeywords={setKeywords}
           flexBasis={['100%', '100%', '50%']}
-          mt={6}
+          mt={[6, 6, 20]}
+          p={2}
         />
       </Flex>
     </Box>

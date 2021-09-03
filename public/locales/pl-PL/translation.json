@@ -13,10 +13,20 @@
       "title":  "Wyszukiwarka CVE",
       "search": "Szukaj",
       "filters": "Filtry",
-      "publish-date-range": "Data Opublikowania Podatności",
-      "publish-start-date": "Opublikowana od",
-      "publish-end-date": "Opublikowana do",
-      "publish-date-explanation": "Te parametry określają kiedy podatność została dodana do bazy podatności.\n\n\nNie jest wymagane podanie dwóch dat jednocześnie ani żadnej z nich."
+      "published-date-range-title": "Data Opublikowania Podatności",
+      "published-date-range-explanation": "Te parametry określają przedział czasu, kiedy podatności zostały dodane do bazy podatności.\n\n\nNie jest wymagane podanie dwóch dat jednocześnie ani żadnej z nich.",
+      "published-start-date": "Opublikowane od",
+      "published-end-date": "Opublikowane do",
+      "modified-date-range-title": "Data Aktualizacji Podatności",
+      "modified-date-range-explanation": "Te parametry określają przedział czasu, kiedy podatności będące już w bazie podatności zostały zaktualizowane. Nie jest wymagane podanie dwóch dat jednocześnie ani żadnej z nich.",
+      "modified-start-date": "Aktualizowane od",
+      "modified-end-date": "Aktualizowane do",
+      "page-size-title": "Rozmiar strony",
+      "page-size-explanation": "Liczba podatności, które znajdą się na jednej stronie.",
+      "keywords-title": "Słowa kluczowe",
+      "keywords-explanation": "Wybiera podatności, w których znajduje się słowo kluczowe. Jeżeli zostanie podane więcej niż jedno słowo kluczowe, wtedy znajdzie wszystkie rekordy, które zawierają przynajmniej jedno z podanych słów.",
+      "keyword": "Słowo kluczowe"
+    
     },
     "cvss-calculator": {
       "title":"Kalkulator CVSS"

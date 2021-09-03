@@ -8,6 +8,7 @@ export const SettingsContext = createContext();
 const SettingsProvider = ({ children }) => {
   const [language, setLanguage] = useState('');
   const suplementaryColor = useColorModeValue('blue.400', 'blue.700');
+  const suplementaryColorHover = useColorModeValue('blue.500', 'blue.800');
   const whiteOnlyColor = useColorModeValue('white', 'white');
   const bgColor = useColorModeValue('white', 'gray.800');
 
@@ -20,6 +21,7 @@ const SettingsProvider = ({ children }) => {
   return (
     <SettingsContext.Provider value={{
       suplementaryColor,
+      suplementaryColorHover,
       whiteOnlyColor,
       bgColor,
       language,
