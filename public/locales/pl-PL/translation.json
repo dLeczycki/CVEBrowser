@@ -24,9 +24,22 @@
       "page-size-title": "Rozmiar strony",
       "page-size-explanation": "Liczba podatności, które znajdą się na jednej stronie.",
       "keywords-title": "Słowa kluczowe",
-      "keywords-explanation": "Wybiera podatności, w których znajduje się słowo kluczowe. Jeżeli zostanie podane więcej niż jedno słowo kluczowe, wtedy znajdzie wszystkie rekordy, które zawierają przynajmniej jedno z podanych słów.",
+      "keywords-explanation": "Wybiera podatności, w których znajduje się słowo kluczowe. Jeżeli zostanie podane więcej niż jedno słowo kluczowe, wtedy znajdzie wszystkie rekordy, które zawierają każde z podanych słów.",
       "keyword": "Słowo kluczowe"
     
+    },
+    "cve-search-results":{
+      "title": "Wyniki Wyszukiwania",
+      "found": "Znaleziono",
+      "matching-vulnerabilities": "pasujących podatności",
+      "add-to-bulletin": "Dodaj do biuletynu",
+      "publish-date": "Data publikacji",
+      "last-modification-date": "Data ostatniej modyfikacji",
+      "critical": "Krytyczna",
+      "high": "Wysoka",
+      "medium": "Średnia",
+      "low": "Niska",
+      "not-supplied": "Brak informacji"
     },
     "cvss-calculator": {
       "title":"Kalkulator CVSS"

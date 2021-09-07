@@ -24,8 +24,21 @@
     "page-size-title": "Page Size",
     "page-size-explanation": "Number of vulnerabilities displayed on one page.",
     "keywords-title": "Keywords",
-    "keywords-explanation": "Retrieve records where a word is found. If there is more than one word matches every word independently.",
+    "keywords-explanation": "Retrieve records where a word is found. If there is more than one word record must contain each word.",
     "keyword": "Keyword"
+  },
+  "cve-search-results":{
+    "title": "Search Results",
+    "found": "Found",
+    "matching-vulnerabilities": "matching vulnerabilities",
+    "add-to-bulletin": "Add to bulletin",
+    "publish-date": "Publish date",
+    "last-modification-date": "Last modification date",
+    "critical": "Critical",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "not-supplied": "Not supplied"
   },
   "cvss-calculator": {
     "title":"CVSS Calculator"
