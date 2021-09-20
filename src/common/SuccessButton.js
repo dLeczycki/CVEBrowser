@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import { Button as ChakraButton } from '@chakra-ui/react';
+import { Button } from '@chakra-ui/react';
 
 import { SettingsContext } from '../context/SettingsContext';
 
-const Button = (props) => {
+const SuccessButton = (props) => {
   const { suplementaryColor, suplementaryColorHover, whiteOnlyColor } = useContext(SettingsContext);
   const { children } = props;
   return (
-    <ChakraButton
+    <Button
       bgColor={suplementaryColor}
       color={whiteOnlyColor}
       _hover={{
@@ -16,8 +16,8 @@ const Button = (props) => {
       {...props}
     >
       {children}
-    </ChakraButton>
+    </Button>
   );
 };
 
-export default Button;
+export default SuccessButton;

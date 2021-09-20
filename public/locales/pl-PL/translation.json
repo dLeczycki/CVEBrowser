@@ -30,23 +30,37 @@
     },
     "cve-search-results":{
       "title": "Wyniki Wyszukiwania",
+      "error-fetching-data": "Wystąpił błąd podczas wyszukiwania podatności",
       "found": "Znaleziono",
       "matching-vulnerabilities": "pasujących podatności",
       "add-to-bulletin": "Dodaj do biuletynu",
+      "remove-from-bulletin": "Usuń z biuletynu",
+      "added-to-bulletin": "dodana do biuletynu",
+      "already-in-bulletin": "już jest w biuletynie",
+      "removed-from-bulletin": "usunięta z biuletynu",
+      "could-not-be-deleted-from-bulletin": "nie mogła być usunięta z biuletynu",
       "publish-date": "Data publikacji",
       "last-modification-date": "Data ostatniej modyfikacji",
+      "description": "Opis",
+      "references": "Odnośniki",
       "critical": "Krytyczna",
       "high": "Wysoka",
       "medium": "Średnia",
       "low": "Niska",
-      "not-supplied": "Brak informacji"
+      "not_supplied": "Brak informacji"
     },
     "cvss-calculator": {
       "title":"Kalkulator CVSS"
     },
     "bulletin-generator":{
       "title":  "Generator Biuletynów" ,
-      "bulletin": "Biuletyn"
+      "bulletin": "Biuletyn",
+      "clear-bulletin": "Wyczyść biuletyn",
+      "generate-bulletin": "Generuj biuletyn",
+      "cleared": "Biuletyn został wyczyszczony",
+      "is-empty": "Biuletyn jest pusty",
+      "generated": "Biuletyn został wygenerowany",
+      "bulletin-filename": "Biuletyn"
     },
     "not-found-page": {
       "title": "Nie znaleziono",

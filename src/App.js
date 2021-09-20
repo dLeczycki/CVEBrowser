@@ -11,6 +11,7 @@ import NavBar from './layout/Navigation/NavBar';
 import Page from './layout/Page';
 import Footer from './layout/Footer';
 import ErrorBoundary from './common/ErrorBoundary';
+import BulletinProvider from './context/BulletinContext';
 
 function App() {
   return (
@@ -32,7 +33,9 @@ function App() {
               height={['70px', '70px', '100%']}
             />
             <ErrorBoundary>
-              <Page rowStart={1} />
+              <BulletinProvider>
+                <Page rowStart={1} />
+              </BulletinProvider>
             </ErrorBoundary>
             <Footer colStart={1} colEnd={3} rowStart={2} height="70px" />
           </Grid>

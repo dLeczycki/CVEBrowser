@@ -29,23 +29,37 @@
   },
   "cve-search-results":{
     "title": "Search Results",
+    "error-fetching-data": "Error fetching data",
     "found": "Found",
     "matching-vulnerabilities": "matching vulnerabilities",
     "add-to-bulletin": "Add to bulletin",
+    "remove-from-bulletin": "Remove from bulletin",
+    "added-to-bulletin": "added to bulletin",
+    "already-in-bulletin": "already in bulletin",
+    "removed-from-bulletin": "removed from bulletin",
+    "could-not-be-deleted-from-bulletin": "could not be removed from bulletin",
     "publish-date": "Publish date",
     "last-modification-date": "Last modification date",
+    "description": "Description",
+    "references": "References",
     "critical": "Critical",
     "high": "High",
     "medium": "Medium",
     "low": "Low",
-    "not-supplied": "Not supplied"
+    "not_supplied": "Not supplied"
   },
   "cvss-calculator": {
     "title":"CVSS Calculator"
   },
   "bulletin-generator":{
     "title":  "Bulletin Generator" ,
-    "bulletin": "Bulletin"
+    "bulletin": "Bulletin",
+    "clear-bulletin": "Clear bulletin",
+    "generate-bulletin": "Generate bulletin",
+    "cleared": "Bulletin has been cleared",
+    "is-empty": "Bulletin is empty",
+    "generated": "Bulletin has been generated",
+    "bulletin-filename": "Bulletin"
   },
   "not-found-page": {
     "title": "Not found",

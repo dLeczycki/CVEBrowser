@@ -22,8 +22,8 @@ export const parseCveServerResponse = (response) => {
       problemTypes: cve.cve.problemtype.problemtype_data,
       references: cve.cve.references.reference_data.map((reference) => reference.url),
       cvssV3Metric: metric,
-      lastModifiedDate: cve.lastModifiedDate,
-      publishedDate: cve.publishedDate,
+      lastModifiedDate: cve.lastModifiedDate.substring(0, 10),
+      publishedDate: cve.publishedDate.substring(0, 10),
     };
   });
 
