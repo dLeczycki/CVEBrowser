@@ -1,3 +1,4 @@
+export const BULLETIN = 'bulletin';
 export const getPLAINFromLocalStorage = (key) => localStorage.getItem(key);
 
 export const getJSONFromLocalStorage = (key) => {
@@ -8,7 +9,7 @@ export const getJSONFromLocalStorage = (key) => {
   return [];
 };
 
-export const setJSONInLocalStorage = (key, value) => {
+export const saveInLocalStorage = (key, value) => {
   if (localStorage) {
     localStorage.setItem(key, JSON.stringify(value));
   }

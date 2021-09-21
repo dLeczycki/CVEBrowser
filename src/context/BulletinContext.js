@@ -1,14 +1,24 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
+
+import { saveInLocalStorage, getJSONFromLocalStorage, BULLETIN } from '../helpers/localStorage';
 
 export const BulletinContext = createContext();
 
 const BulletinProvider = ({ children }) => {
   const [bulletinCveList, setBulletinCveList] = useState([]);
 
+  const saveBulletinInLS = (newBulletin) => {
+    saveInLocalStorage(BULLETIN, newBulletin);
+  };
+
   const addCveToBulletin = (newCve) => {
     const index = bulletinCveList.findIndex((cve) => cve.cveId === newCve.cveId);
     if (index === -1) {
-      setBulletinCveList((prev) => [...prev, newCve]);
+      setBulletinCveList((prev) => {
+        const newBulletinCveList = [...prev, newCve];
+        saveBulletinInLS(newBulletinCveList);
+        return newBulletinCveList;
+      });
       return true;
     }
     return false;
@@ -18,7 +28,11 @@ const BulletinProvider = ({ children }) => {
     const index = bulletinCveList.findIndex((cve) => cve.cveId === cveToRemove.cveId);
 
     if (index !== -1) {
-      setBulletinCveList((prev) => prev.filter((cve) => cve.cveId !== cveToRemove.cveId));
+      setBulletinCveList((prev) => {
+        const newBulletinCveList = prev.filter((cve) => cve.cveId !== cveToRemove.cveId);
+        saveBulletinInLS(newBulletinCveList);
+        return newBulletinCveList;
+      });
       return true;
     }
 
@@ -27,6 +41,7 @@ const BulletinProvider = ({ children }) => {
 
   const clearBulletin = () => {
     setBulletinCveList([]);
+    saveBulletinInLS([]);
   };
 
   const isBulletinEmpty = () => {
@@ -39,6 +54,12 @@ const BulletinProvider = ({ children }) => {
     if (index === -1) return false;
     return true;
   };
+
+  useEffect(() => {
+    const bulletinCveListInLS = getJSONFromLocalStorage(BULLETIN);
+    if (!Array.isArray(bulletinCveListInLS)) setBulletinCveList([]);
+    else setBulletinCveList(bulletinCveListInLS);
+  }, []);
 
   return (
     <BulletinContext.Provider
