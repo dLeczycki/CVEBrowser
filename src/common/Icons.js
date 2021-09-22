@@ -3,6 +3,7 @@ import {
   FaMoon,
   FaSun,
   FaFileAlt,
+  FaEye,
   FaSearchengin,
   FaCog,
   FaCalculator,
@@ -27,3 +28,4 @@ export const PlusIcon = (props) => (<Icon as={FaPlus} {...props} />);
 export const TimesIcon = (props) => (<Icon as={FaTimes} {...props} />);
 export const VulnerabilityIcon = (props) => (<Icon as={FaBug} {...props} />);
 export const BanIcon = (props) => (<Icon as={FaBan} {...props} />);
+export const EyeIcon = (props) => (<Icon as={FaEye} {...props} />);

@@ -3,10 +3,11 @@ import { GridItem } from '@chakra-ui/react';
 import { Switch, Route } from 'react-router-dom';
 
 import CVESearchPage from '../pages/CVESearchPage';
+import CVEDetailsPage from '../pages/CVEDetailsPage';
+import CVESearchResultsPage from '../pages/CVESearchResultsPage';
 import BulletinGeneratorPage from '../pages/BulletinGeneratorPage';
 import CVSSCalculatorPage from '../pages/CVSSCalculatorPage';
 import SettingsPage from '../pages/SettingsPage';
-import CVESearchResultsPage from '../pages/CVESearchResultsPage';
 import NotFoundPage from '../pages/NotFoundPage';
 
 import Spinner from '../common/Spinner';
@@ -18,6 +19,7 @@ const Page = (props) => (
         <Route component={CVESearchPage} path="/" exact />
         <Route component={CVESearchPage} path="/cve-search" exact />
         <Route component={CVESearchResultsPage} path="/cve-search/results/:page?" />
+        <Route component={CVEDetailsPage} path="/cve-details/:cveId" />
         <Route component={BulletinGeneratorPage} path="/bulletin-generator" />
         <Route component={CVSSCalculatorPage} path="/cvss-calculator" />
         <Route component={SettingsPage} path="/settings" />

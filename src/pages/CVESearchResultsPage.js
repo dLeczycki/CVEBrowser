@@ -6,7 +6,7 @@ import {
 } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 
-import { API_KEY } from '../constants/API';
+import { API_CVES } from '../constants/API';
 import Header from '../common/Header';
 import { CVESearchIcon } from '../common/Icons';
 import Spinner from '../common/Spinner';
@@ -33,14 +33,13 @@ const CVESearchResultsPage = () => {
   if (!state) history.push('/cve-search');
 
   const createRequestURL = () => {
-    let requestURL = `${API_KEY}`;
+    let requestURL = `${API_CVES}`;
 
     const {
       publishedDateRange, modifiedDateRange, pageSize, keywords,
     } = state;
 
-    // requestURL += `?resultsPerPage=${pageSize}`;
-    requestURL += '?';
+    requestURL += `?resultsPerPage=${pageSize}`;
 
     if (publishedDateRange.startDate) {
       const date = parseDate(publishedDateRange.startDate);

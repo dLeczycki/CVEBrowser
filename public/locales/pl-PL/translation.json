@@ -50,7 +50,16 @@
       "not_supplied": "Brak informacji"
     },
     "cvss-calculator": {
-      "title":"Kalkulator CVSS"
+      "title":"Kalkulator CVSS",
+      "severity-details": "Szczegóły dt. dotkliwości",
+      "attack-vector": "Wektor ataku",
+      "privileges-required": "Wymagane uprawnienia",
+      "scope": "Zakres",
+      "attack-complexity": "Złożoność ataku",
+      "user-interaction": "interakcja użytkownika",
+      "confidentiality-impact": "Wpływ na poufność",
+      "integrity-impact": "Wpływ na integralność",
+      "availability-impact": "Wpływ na dostępność"
     },
     "bulletin-generator":{
       "title":  "Generator Biuletynów" ,

@@ -49,7 +49,16 @@
     "not_supplied": "Not supplied"
   },
   "cvss-calculator": {
-    "title":"CVSS Calculator"
+    "title":"CVSS Calculator",
+    "severity-details": "Severity Details",
+    "attack-vector": "Attack vector",
+    "privileges-required": "Privileges required",
+    "scope": "Scope",
+    "attack-complexity": "Attack complexity",
+    "user-interaction": "User interaction",
+    "confidentiality-impact": "Confidentiality impact",
+    "integrity-impact": "Integrity impact",
+    "availability-impact": "Availability impact"
   },
   "bulletin-generator":{
     "title":  "Bulletin Generator" ,
