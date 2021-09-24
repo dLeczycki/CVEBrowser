@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 
-const getJSONFromLocalStorage = (key) => {
+const getJSONFromLocalStorage = (key, defaultValue = undefined) => {
   const value = localStorage.getItem(key);
   if (localStorage && value) {
     return JSON.parse(value);
   }
-  return [];
+  return defaultValue;
 };
 
 const saveInLocalStorage = (key, value) => {
@@ -14,9 +14,9 @@ const saveInLocalStorage = (key, value) => {
   }
 };
 
-export const useLocalStorage = (state, setState, keyInLS, ...dependencies) => {
+export const useLocalStorage = (state, setState, keyInLS, defaultValue, ...dependencies) => {
   useEffect(() => {
-    const stateInLS = getJSONFromLocalStorage(keyInLS);
+    const stateInLS = getJSONFromLocalStorage(keyInLS, defaultValue);
     if (stateInLS !== undefined || stateInLS.length > 0) setState(stateInLS);
   }, []);
 

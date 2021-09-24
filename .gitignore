@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+run_on_windows.ps1
+run_on_windows.cmd
+log

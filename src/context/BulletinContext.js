@@ -49,7 +49,7 @@ const BulletinProvider = ({ children }) => {
     return true;
   };
 
-  useLocalStorage(bulletinCveList, setBulletinCveList, BULLETIN);
+  useLocalStorage(bulletinCveList, setBulletinCveList, BULLETIN, []);
 
   return (
     <BulletinContext.Provider
