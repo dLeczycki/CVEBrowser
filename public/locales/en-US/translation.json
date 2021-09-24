@@ -25,7 +25,9 @@
     "page-size-explanation": "Number of vulnerabilities displayed on one page.",
     "keywords-title": "Keywords",
     "keywords-explanation": "Retrieve records where a word is found. If there is more than one word record must contain each word.",
-    "keyword": "Keyword"
+    "keyword": "Keyword",
+    "single-cve-title": "CVE",
+    "single-cve-explanation": "This field ignores rest of the filters. It allows to search for vulnerability with provided CVE ID."
   },
   "cve-search-results":{
     "title": "Search Results",
@@ -46,7 +48,8 @@
     "high": "High",
     "medium": "Medium",
     "low": "Low",
-    "not_supplied": "Not supplied"
+    "not_supplied": "Not supplied",
+    "couldnt-fetch-cve": "Error occurred fetching CVE"
   },
   "cvss-calculator": {
     "title":"CVSS Calculator",

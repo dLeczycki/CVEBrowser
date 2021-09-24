@@ -14,7 +14,7 @@ import TotalResults from '../components/cve-search-results/TotalResults';
 import CVEList from '../components/cve-search-results/CVEList';
 import Pager from '../components/cve-search-results/Pager';
 
-import { parseCveServerResponse, parseDate } from '../helpers/utils';
+import { parseCveServerResponse, parseDateForSearch } from '../helpers/utils';
 
 const CVESearchResultsPage = () => {
   const { t } = useTranslation();
@@ -42,22 +42,22 @@ const CVESearchResultsPage = () => {
     requestURL += `?resultsPerPage=${pageSize}`;
 
     if (publishedDateRange.startDate) {
-      const date = parseDate(publishedDateRange.startDate);
+      const date = parseDateForSearch(publishedDateRange.startDate);
       requestURL += `&pubStartDate=${date}`;
     }
 
     if (publishedDateRange.endDate) {
-      const date = parseDate(publishedDateRange.endDate);
+      const date = parseDateForSearch(publishedDateRange.endDate);
       requestURL += `&pubEndDate=${date}`;
     }
 
     if (modifiedDateRange.startDate) {
-      const date = parseDate(modifiedDateRange.startDate);
+      const date = parseDateForSearch(modifiedDateRange.startDate);
       requestURL += `&modStartDate=${date}`;
     }
 
     if (modifiedDateRange.endDate) {
-      const date = parseDate(modifiedDateRange.endDate);
+      const date = parseDateForSearch(modifiedDateRange.endDate);
       requestURL += `&modEndDate=${date}`;
     }
 

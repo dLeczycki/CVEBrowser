@@ -32,7 +32,7 @@ export const parseCveServerResponse = (response) => {
   return [cveList, totalResults];
 };
 
-export const parseDate = (date) => {
+export const parseDateForSearch = (date) => {
   // yyyy-MM-dd'T'HH:mm:ss:SSS z
   const year = date.getFullYear().toString();
 

@@ -5,6 +5,7 @@ import {
   Flex, FormLabel, Select,
 } from '@chakra-ui/react';
 import { SettingsContext } from '../../context/SettingsContext';
+import { EN_US_LOCALES, PL_PL_LOCALES } from '../../constants/strings';
 
 const LanguageForm = () => {
   const { language, setLanguage } = useContext(SettingsContext);
@@ -21,8 +22,8 @@ const LanguageForm = () => {
         {`${t('settings.language')}:`}
       </FormLabel>
       <Select value={language} onChange={handleChange}>
-        <option value="en-US">English</option>
-        <option value="pl-PL">Polski</option>
+        <option value={EN_US_LOCALES}>English</option>
+        <option value={PL_PL_LOCALES}>Polski</option>
       </Select>
     </Flex>
   );

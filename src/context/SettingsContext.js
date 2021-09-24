@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { createContext, useState, useEffect } from 'react';
 import { useColorModeValue } from '@chakra-ui/react';
-import { getPLAINFromLocalStorage } from '../helpers/localStorage';
+import { EN_US_LOCALES, LANGUAGE } from '../constants/strings';
 
 export const SettingsContext = createContext();
 
@@ -22,9 +22,9 @@ const SettingsProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    const languageInLocalStorage = getPLAINFromLocalStorage('i18nextLng');
-    // eslint-disable-next-line no-unused-expressions
-    languageInLocalStorage !== null ? setLanguage(languageInLocalStorage) : setLanguage('en-US');
+    const languageInLocalStorage = localStorage.getItem(LANGUAGE);
+    const chooseLanguage = languageInLocalStorage !== null ? languageInLocalStorage : EN_US_LOCALES;
+    setLanguage(chooseLanguage);
   }, []);
 
   return (

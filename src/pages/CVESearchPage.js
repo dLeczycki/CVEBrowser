@@ -14,6 +14,13 @@ import PublishedDateFilter from '../components/cve-search/PublishedDateFilter';
 import ModifiedDateFilter from '../components/cve-search/ModifiedDateFilter';
 import PageSizeFilter from '../components/cve-search/PageSizeFilter';
 import KeywordsFilter from '../components/cve-search/KeywordsFilter';
+import SingleCVEFilter from '../components/cve-search/SingleCVEFilter';
+
+import { useLocalStorage } from '../hooks/useLocalStorage';
+
+import {
+  KEYWORDS, PAGE_SIZE, CVE,
+} from '../constants/strings';
 
 const CVESearchPage = () => {
   const { t } = useTranslation();
@@ -30,13 +37,18 @@ const CVESearchPage = () => {
   });
   const [pageSize, setPageSize] = useState(20);
   const [keywords, setKeywords] = useState([]);
+  const [cveId, setCVEId] = useState('');
+
+  useLocalStorage(keywords, setKeywords, KEYWORDS);
+  useLocalStorage(pageSize, setPageSize, PAGE_SIZE);
+  useLocalStorage(cveId, setCVEId, CVE);
 
   return (
     <Box as="article">
       <Header title={titleT} icon={<CVESearchIcon />} />
       <SearchCVEButton
         searchParams={{
-          publishedDateRange, modifiedDateRange, pageSize, keywords,
+          publishedDateRange, modifiedDateRange, pageSize, keywords, cveId,
         }}
         display="block"
         mx="auto"
@@ -47,7 +59,7 @@ const CVESearchPage = () => {
         fontSize="2xl"
         variant="solid"
       />
-      <Heading as="h2" mt={[12, 12, 6]} mb={[6, 6, 4]} pl={[0, 0, 2]} textAlign={['center', 'center', 'left']}>{filtersT}</Heading>
+      <Heading as="h2" mt={[12]} mb={[6, 6, 4]} textAlign={['center']}>{filtersT}</Heading>
       <Flex as="section" flexWrap="wrap" justifyContent="space-around">
         <PublishedDateFilter
           publishedDateRange={publishedDateRange}
@@ -74,6 +86,13 @@ const CVESearchPage = () => {
           setKeywords={setKeywords}
           flexBasis={['100%', '100%', '50%']}
           mt={[6, 6, 20]}
+          p={2}
+        />
+        <SingleCVEFilter
+          cveId={cveId}
+          setCVEId={setCVEId}
+          flexBasis={['100%', '100%', '50%']}
+          mt={6}
           p={2}
         />
       </Flex>

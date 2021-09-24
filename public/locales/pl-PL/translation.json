@@ -25,8 +25,9 @@
       "page-size-explanation": "Liczba podatności, które znajdą się na jednej stronie.",
       "keywords-title": "Słowa kluczowe",
       "keywords-explanation": "Wybiera podatności, w których znajduje się słowo kluczowe. Jeżeli zostanie podane więcej niż jedno słowo kluczowe, wtedy znajdzie wszystkie rekordy, które zawierają każde z podanych słów.",
-      "keyword": "Słowo kluczowe"
-    
+      "keyword": "Słowo kluczowe",
+      "single-cve-title": "CVE",
+      "single-cve-explanation": "Po uzupełnieniu tego pola ignorowane są pozostałe filtry. Wyszukiwana jest wskazana podatność CVE"
     },
     "cve-search-results":{
       "title": "Wyniki Wyszukiwania",
@@ -47,7 +48,8 @@
       "high": "Wysoka",
       "medium": "Średnia",
       "low": "Niska",
-      "not_supplied": "Brak informacji"
+      "not_supplied": "Brak informacji",
+      "couldnt-fetch-cve": "Wystąpił błąd podczas pobierania CVE"
     },
     "cvss-calculator": {
       "title":"Kalkulator CVSS",

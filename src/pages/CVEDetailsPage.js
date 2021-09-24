@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import {
-  Box, Grid, Flex, Heading, Text, Link, List, ListItem, ListIcon,
+  Box, Grid, Center, Flex, Heading, Text, Link, List, ListItem, ListIcon,
 } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 
@@ -27,6 +27,7 @@ const CVEDetailsPage = () => {
     low: t('cve-search-results.low'),
     not_supplied: t('cve-search-results.not_supplied'),
   };
+  const couldntFetchCVET = t('cve-search-results.couldnt-fetch-cve');
   const severityDetailsT = t('cvss-calculator.severity-details');
   const attackVectorT = t('cvss-calculator.attack-vector');
   const privilegesRequiredT = t('cvss-calculator.privileges-required');
@@ -138,17 +139,21 @@ const CVEDetailsPage = () => {
     const fetchCve = async () => {
       setIsLoading(true);
 
-      if (state === undefined) {
-        const response = await fetch(`${API_CVE}${cveId}`);
-        const responseJSON = await response.json();
+      try {
+        if (state === undefined) {
+          const response = await fetch(`${API_CVE}${cveId}`);
+          const responseJSON = await response.json();
 
-        const [searchedCVE] = parseCveServerResponse(responseJSON)[0];
-        setContent(createContent(searchedCVE));
-      } else {
-        setContent(createContent(state));
+          const [searchedCVE] = parseCveServerResponse(responseJSON)[0];
+          setContent(createContent(searchedCVE));
+        } else {
+          setContent(createContent(state));
+        }
+      } catch (error) {
+        setContent(<Center>{couldntFetchCVET}</Center>);
+      } finally {
+        setIsLoading(false);
       }
-
-      setIsLoading(false);
     };
 
     fetchCve();
