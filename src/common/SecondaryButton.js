@@ -3,15 +3,15 @@ import { Button } from '@chakra-ui/react';
 
 import { SettingsContext } from '../context/SettingsContext';
 
-const SuccessButton = (props) => {
-  const { suplementaryColor, suplementaryColorHover, whiteOnlyColor } = useContext(SettingsContext);
+const SecondaryButton = (props) => {
+  const { secondaryColor, secondaryColorHover, whiteOnlyColor } = useContext(SettingsContext);
   const { children } = props;
   return (
     <Button
-      bgColor={suplementaryColor}
+      bgColor={secondaryColor}
       color={whiteOnlyColor}
       _hover={{
-        background: suplementaryColorHover,
+        background: secondaryColorHover,
       }}
       {...props}
     >
@@ -20,4 +20,4 @@ const SuccessButton = (props) => {
   );
 };
 
-export default SuccessButton;
+export default SecondaryButton;

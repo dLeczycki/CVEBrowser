@@ -1,7 +1,9 @@
 import React, { createContext, useState } from 'react';
 
-import { useLocalStorage } from '../hooks/useLocalStorage';
 import { BULLETIN } from '../constants/strings';
+import { API_CVE } from '../constants/API';
+import { parseCveServerResponse } from '../helpers/utils';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 export const BulletinContext = createContext();
 
@@ -49,6 +51,18 @@ const BulletinProvider = ({ children }) => {
     return true;
   };
 
+  const refreshBulletin = async () => {
+    const newBulletinCveList = await Promise.all(bulletinCveList.map(async (cve) => {
+      const response = await fetch(`${API_CVE}${cve.cveId}`);
+      const responseJSON = await response.json();
+
+      const [searchedCVE] = parseCveServerResponse(responseJSON)[0];
+      return searchedCVE;
+    }));
+
+    setBulletinCveList(newBulletinCveList);
+  };
+
   useLocalStorage(bulletinCveList, setBulletinCveList, BULLETIN, []);
 
   return (
@@ -60,6 +74,7 @@ const BulletinProvider = ({ children }) => {
         clearBulletin,
         isCveInBulletin,
         isBulletinEmpty,
+        refreshBulletin,
       }}
     >
       {children}

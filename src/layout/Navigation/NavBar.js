@@ -8,14 +8,14 @@ import SettingsButton from './NavButtons/SettingsButton';
 import { SettingsContext } from '../../context/SettingsContext';
 
 const NavBar = (layoutProps) => {
-  const { suplementaryColor, bgColor } = useContext(SettingsContext);
+  const { primaryColor, bgColor } = useContext(SettingsContext);
 
   return (
     <GridItem
       as="nav"
       borderTop={['4px', '4px', '0']}
       borderRight={['0', '0', '2px']}
-      borderColor={[suplementaryColor, suplementaryColor, suplementaryColor]}
+      borderColor={[primaryColor, primaryColor, primaryColor]}
       backgroundColor={bgColor}
       zIndex={2}
       {...layoutProps}

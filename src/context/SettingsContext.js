@@ -7,8 +7,10 @@ export const SettingsContext = createContext();
 
 const SettingsProvider = ({ children }) => {
   const [language, setLanguage] = useState('');
-  const suplementaryColor = useColorModeValue('blue.400', 'blue.700');
-  const suplementaryColorHover = useColorModeValue('blue.500', 'blue.800');
+  const primaryColor = useColorModeValue('blue.400', 'blue.700');
+  const primaryColorHover = useColorModeValue('blue.500', 'blue.800');
+  const secondaryColor = useColorModeValue('green.400', 'green.700');
+  const secondaryColorHover = useColorModeValue('green.500', 'green.800');
   const errorColor = useColorModeValue('red.400', 'red.700');
   const errorColorHover = useColorModeValue('red.500', 'red.800');
   const whiteOnlyColor = useColorModeValue('white', 'white');
@@ -29,8 +31,10 @@ const SettingsProvider = ({ children }) => {
 
   return (
     <SettingsContext.Provider value={{
-      suplementaryColor,
-      suplementaryColorHover,
+      primaryColor,
+      primaryColorHover,
+      secondaryColor,
+      secondaryColorHover,
       errorColor,
       errorColorHover,
       whiteOnlyColor,

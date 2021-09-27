@@ -3,7 +3,7 @@ import { GridItem } from '@chakra-ui/react';
 import { SettingsContext } from '../context/SettingsContext';
 
 const Footer = (layoutProps) => {
-  const { suplementaryColor, whiteOnlyColor } = useContext(SettingsContext);
+  const { primaryColor, whiteOnlyColor } = useContext(SettingsContext);
 
   return (
     <GridItem
@@ -11,7 +11,7 @@ const Footer = (layoutProps) => {
       {...layoutProps}
       lineHeight="70px"
       textAlign="center"
-      bgColor={suplementaryColor}
+      bgColor={primaryColor}
       color={whiteOnlyColor}
     >
       &copy; Daniel Łęczycki 2021

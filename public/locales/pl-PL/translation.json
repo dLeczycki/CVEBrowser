@@ -68,9 +68,12 @@
       "bulletin": "Biuletyn",
       "clear-bulletin": "Wyczyść biuletyn",
       "generate-bulletin": "Generuj biuletyn",
+      "refresh-bulletin": "Odśwież biuletyn",
       "cleared": "Biuletyn został wyczyszczony",
       "is-empty": "Biuletyn jest pusty",
       "generated": "Biuletyn został wygenerowany",
+      "refreshed": "Odświeżono biuletyn",
+      "error-refreshing": "Nie udało się odświeżyć",
       "bulletin-filename": "Biuletyn"
     },
     "not-found-page": {

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import { BulletinContext } from '../../context/BulletinContext';
 
-import SuccessButton from '../../common/SuccessButton';
+import PrimaryButton from '../../common/PrimaryButton';
 
 import DocumentGenerator from '../../helpers/documentGenerator';
 
@@ -58,9 +58,9 @@ const GenerateBulletinButton = ({ ...style }) => {
   };
 
   return (
-    <SuccessButton {...style} onClick={handleOnClick}>
+    <PrimaryButton {...style} onClick={handleOnClick}>
       {generateBulletinT}
-    </SuccessButton>
+    </PrimaryButton>
   );
 };
 
